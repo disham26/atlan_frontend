@@ -1,10 +1,18 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <b-navbar toggleable="lg" type="dark" variant="primary">
+      <b-navbar-brand><router-link to="/"> Home </router-link></b-navbar-brand>
+      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+      <b-collapse id="nav-collapse" is-nav>
+        <b-navbar-item><router-link to="/task1">Task1&nbsp;</router-link></b-navbar-item>
+        <b-navbar-item><router-link to="/task2">  Task2&nbsp; </router-link></b-navbar-item>
+        <b-navbar-item><router-link to="/task3">  Task3 </router-link></b-navbar-item>
+      </b-collapse>
+      </b-navbar>
     </div>
     <router-view/>
+    
   </div>
 </template>
 
@@ -16,9 +24,7 @@
   text-align: center;
   color: #2c3e50;
 }
-#nav {
-  padding: 30px;
-}
+
 
 #nav a {
   font-weight: bold;
